@@ -1,5 +1,7 @@
 # Utils.lua
 
+[English Below](#gb)
+
 # :de:
 Du hast die freiheit sie für dein eigene(s) projekt(e) zu nutzen!
 
