@@ -12,6 +12,11 @@ utils = {
 			["S"] = "Berlin_A3L92_S",
 			["K"] = "Berlin_A3L92_K",
 		},
+		
+		dt5 = {
+			["1"] = "Hamburg_DT5.1",
+			["2"] = "Hamburg_DT5.2",
+		},
 
 		gi1e = { -- Nur zum angucken, nicht fahrbar!
 			["A"] = "Berlin_GI1E_a",
@@ -31,7 +36,8 @@ utils = {
 			["DefaultB"] = "HK_ExteriorB_Default.png",
 		},
 		a3l92 = {
-			["Default"] = "A3L92-Default.png"
+			["Default"] = "A3L92-Default.png",
+			["HellGelb"] = "Skins/A3L92_HellGelb.png",
 		},
 	},
 	
