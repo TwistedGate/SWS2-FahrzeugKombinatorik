@@ -22,7 +22,7 @@ If any questions arrise you can write me in the [Subway Sim Discord](https://dis
 
 Have fun learning from it!
 
-## Instllation
+## Installation
 - Go to: `C:\Users\YourName\Documents\My Games\SubwaySim 2`
 - Create a Folder and name it: `Mods`
 - Extract the contents of the ZIP File side it.
