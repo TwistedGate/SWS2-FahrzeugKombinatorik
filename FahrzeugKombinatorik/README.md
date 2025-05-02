@@ -55,8 +55,8 @@ scripts = {
 
 ### Function: `utils:wagen(name, forward, number, skinPath)`
 `name` = Vehicle Type (e.g. "Berlin_A3L92_S")  
-`forward` = Should the Vehicle facing be Forwards (`true`) or Back (`false`) ?
-`number` = What number should it have? It can be set to `nil` to generate one randomly.
+`forward` = Should the Vehicle facing be Forwards (`true`) or Back (`false`) ?  
+`number` = What number should it have? It can be set to `nil` to generate one randomly.  
 `skinPath` = Texture Repaint File Path (e.g. "A3L92-SampleSkin.png")
 
 It is the important bit!
