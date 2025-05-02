@@ -29,15 +29,16 @@ utils = {
 		},
 	},
 
-	-- Nur hier falls ich mich dazu entscheide mal Repaints zu machen.
+	-- Hier könnte man seine eigenen eintragen
 	skins = {
 		hk = {
-			["DefaultA"] = "HK_ExteriorA_Default.png",
-			["DefaultB"] = "HK_ExteriorB_Default.png",
+			["SampleSkin"] = "HK1-SampleSkin.png",
 		},
 		a3l92 = {
-			["Default"] = "A3L92-Default.png",
-			["HellGelb"] = "Skins/A3L92_HellGelb.png",
+			["SampleSkin"] = "A3L92-SampleSkin.png",
+		},
+		dt5 = {
+			["SampleSkin"] = "SkinGraffiti.png",
 		},
 	},
 	
