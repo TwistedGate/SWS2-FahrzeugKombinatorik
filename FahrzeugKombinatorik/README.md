@@ -27,15 +27,17 @@ Es gibt viele beispiele in der `HK_Category.lua`, `A3L92_Category.lua` und `KI_L
 
 Hier aus der `A3L92_Category.lua` ein gezogenes beispiel:
 ```lua
-utils:wagen(utils.ftype.a3l92["S"], true, 538),
-utils:wagen(utils.ftype.a3l92["K"], false, 539),
-utils:wagen(utils.ftype.a3l92["S"], true, 540),
-utils:wagen(utils.ftype.a3l92["K"], false, 541),
-
-utils:wagen(utils.ftype.hk["A"], true, 10011),
-utils:wagen(utils.ftype.hk["B"], true, 10012),
-utils:wagen(utils.ftype.hk["C"], false, 10013),
-utils:wagen(utils.ftype.hk["D"], false, 10014),
+vehicles = {
+  utils:wagen(utils.ftype.a3l92["S"], true, 538),
+  utils:wagen(utils.ftype.a3l92["K"], false, 539),
+  utils:wagen(utils.ftype.a3l92["S"], true, 540),
+  utils:wagen(utils.ftype.a3l92["K"], false, 541),
+  
+  utils:wagen(utils.ftype.hk["A"], true, 10011),
+  utils:wagen(utils.ftype.hk["B"], true, 10012),
+  utils:wagen(utils.ftype.hk["C"], false, 10013),
+  utils:wagen(utils.ftype.hk["D"], false, 10014),
+},
 ```
 Wie du siehst, sollte es echt einfach sein zu verstehen.
 
@@ -68,15 +70,17 @@ There are many examples in the `HK_Category.lua`, `A3L92_Category.lua` and `KI_L
 
 Here is one copied from `A3L92_Category.lua`
 ```lua
-utils:wagen(utils.ftype.a3l92["S"], true, 538),
-utils:wagen(utils.ftype.a3l92["K"], false, 539),
-utils:wagen(utils.ftype.a3l92["S"], true, 540),
-utils:wagen(utils.ftype.a3l92["K"], false, 541),
-
-utils:wagen(utils.ftype.hk["A"], true, 10011),
-utils:wagen(utils.ftype.hk["B"], true, 10012),
-utils:wagen(utils.ftype.hk["C"], false, 10013),
-utils:wagen(utils.ftype.hk["D"], false, 10014),
+vehicles = {
+  utils:wagen(utils.ftype.a3l92["S"], true, 538),
+  utils:wagen(utils.ftype.a3l92["K"], false, 539),
+  utils:wagen(utils.ftype.a3l92["S"], true, 540),
+  utils:wagen(utils.ftype.a3l92["K"], false, 541),
+  
+  utils:wagen(utils.ftype.hk["A"], true, 10011),
+  utils:wagen(utils.ftype.hk["B"], true, 10012),
+  utils:wagen(utils.ftype.hk["C"], false, 10013),
+  utils:wagen(utils.ftype.hk["D"], false, 10014),
+},
 ```
 
 As you can see it should be straight forward.
