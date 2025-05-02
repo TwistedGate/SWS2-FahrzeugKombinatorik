@@ -15,8 +15,8 @@ scripts = {
 ### Funktion: `utils:wagen(name, forward, number, skinPath)`
 `name` = Wagen Typ (z.b. "Berlin_A3L92_S")  
 `forward` = Soll der Wagen nach Vorne zeigen (`true`) oder nach Hinten (`false`) zeigen?  
-`number` = Welche nummer soll der Wagen haben? Wenn dies auf "nil" gesetzt wird, wird sie Zufällig Generiert  
-`skinPath` = Der Textur-Datei Pfad (z.b. "A3L92-SampleSkin.png")
+`number` = Welche nummer soll der Wagen haben? Wenn dies auf `nil` gesetzt wird, wird sie Zufällig Generiert  
+`skinPath` = Der Textur-Datei Pfad (z.b. "A3L92-SampleSkin.png") | Auch dies kann auf `nil` gesetzt werden (oder gar ignoriert) und es wird die standard texture genutzt.
 
 Sie ist das wichtigste!
 
@@ -57,7 +57,7 @@ scripts = {
 `name` = Vehicle Type (e.g. "Berlin_A3L92_S")  
 `forward` = Should the Vehicle facing be Forwards (`true`) or Back (`false`) ?  
 `number` = What number should it have? It can be set to `nil` to generate one randomly.  
-`skinPath` = Texture Repaint File Path (e.g. "A3L92-SampleSkin.png")
+`skinPath` = Texture Repaint File Path (e.g. "A3L92-SampleSkin.png") | It too can be set to `nil` to use the Default texture.
 
 It is the important bit!
 
