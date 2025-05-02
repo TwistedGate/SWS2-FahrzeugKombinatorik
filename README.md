@@ -11,7 +11,7 @@ Und viel spaß beim draus lernen!
 - Entpacke dort die ZIP Datei. (Dessen inhalt dort hinein ziehen)
 - - Nutze dafür  `WinRAR` oder `7Zip`
 
-# Aktualisieren
+## Aktualisieren
 - Enferne den alten Ordner.
 - Folge die Installation Oben.
 
@@ -28,6 +28,6 @@ Have fun learning from it!
 - Extract the contents of the ZIP File side it.
 - - Use either `WinRAR` or `7Zip`
 
-# Updating
+## Updating
 - Delete the old Folder.
 - Redo the Installation above.
