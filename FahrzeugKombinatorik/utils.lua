@@ -7,7 +7,7 @@ utils = {
 			["C"] = "Berlin_HK_C",
 			["D"] = "Berlin_HK_D",
 		},
-
+		
 		a3l92 = {
 			["S"] = "Berlin_A3L92_S",
 			["K"] = "Berlin_A3L92_K",
@@ -17,12 +17,25 @@ utils = {
 			["1"] = "Hamburg_DT5.1",
 			["2"] = "Hamburg_DT5.2",
 		},
-
+		
+		-- KI Fahrzeuge -- Nur zum angucken, nicht fahrbar!
+		-- AI Vehicles -- Just too look at them, not drivable!
+		
+		br474 = {
+			["A"] = "Hamburg_BR474",
+			["B"] = "Hamburg_BR874",
+		},
+		
+		flexity = {
+			["A"] = "Berlin_Flexity_F8Z",
+			-- ["B"] = "Berlin_Flexity_F8Z_1x", -- Komplett Kaputt! Completely Broken!
+		},
+		
 		gi1e = { -- Nur zum angucken, nicht fahrbar!
 			["A"] = "Berlin_GI1E_a",
 			["B"] = "Berlin_GI1E_b",
 		},
-
+		
 		br481 = { -- Nur zum angucken, nicht fahrbar!
 			["A"] = "Berlin_BR481",
 			["B"] = "Berlin_BR482"
