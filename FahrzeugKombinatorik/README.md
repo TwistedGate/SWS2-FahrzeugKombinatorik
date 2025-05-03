@@ -65,7 +65,7 @@ scripts = {
 
 It is the important bit!
 
-### Fahrzeug Typen, wie und wo?
+### Vehicle Types, how and where?
 There are many examples in the `HK_Category.lua`, `A3L92_Category.lua` and `KI_Looker.lua` scripts!
 
 Here is one copied from `A3L92_Category.lua`
