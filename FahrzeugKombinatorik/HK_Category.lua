@@ -8,6 +8,15 @@
 
 --]]
 
+local fk_hk_cat = utils:makeCat(
+  "FahrzeugKombinatorik_HK_Group",
+  "FK HK",
+  "HK_big",
+  { "Berlin" },
+  "Alle benutzerdefinierten Zusammenstellungen von \"FahrzeugKombinatorik\".\n\n"..
+  "All custom consists added by \"FahrzeugKombinatorik\"."
+)
+
 local hk_8er = {
   contentType     = "trainComposition",
   contentName     = "HK_8er",
@@ -21,7 +30,7 @@ local hk_8er = {
   numberPool      = "Berlin",
 
   compatibleMaps  = { "Berlin" },
-  vehicleGroup    = "Berlin_HK_Group",
+  vehicleGroup    = fk_hk_cat,
 
   vehicles = {
     utils:wagen(utils.ftype.hk["A"], true, 10011),
@@ -49,7 +58,7 @@ local hk_6er = {
   numberPool      = "Berlin",
 
   compatibleMaps  = { "Berlin" },
-  vehicleGroup    = "Berlin_HK_Group",
+  vehicleGroup    = fk_hk_cat,
 
   vehicles = {
     utils:wagen(utils.ftype.hk["A"], true, 10011),
@@ -75,7 +84,7 @@ local mini_hk = {
   numberPool      = "Berlin",
 
   compatibleMaps  = { "Berlin" },
-  vehicleGroup    = "Berlin_HK_Group",
+  vehicleGroup    = fk_hk_cat,
 
   vehicles = {
     utils:wagen(utils.ftype.hk["A"], true, 10011),
@@ -97,7 +106,7 @@ local hk_a3l92 = {
   numberPool      = "Berlin",
 
   compatibleMaps  = { "Berlin" },
-  vehicleGroup    = "Berlin_HK_Group",
+  vehicleGroup    = fk_hk_cat,
 
   vehicles = {
     utils:wagen(utils.ftype.hk["A"], true, 10011),

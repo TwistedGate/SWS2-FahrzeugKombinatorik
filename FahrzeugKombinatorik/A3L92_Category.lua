@@ -8,6 +8,15 @@
 
 --]]
 
+local fk_a3l_cat = utils:makeCat(
+  "FahrzeugKombinatorik_A3L_Group",
+  "FK A3L92",
+  "A3L92_big",
+  { "Berlin" },
+  "Alle benutzerdefinierten Zusammenstellungen von \"FahrzeugKombinatorik\".\n\n"..
+  "All custom consists added by \"FahrzeugKombinatorik\"."
+)
+
 local a3l92_x1 = {
   contentType     = "trainComposition",
   contentName     = "1x_A3L92",
@@ -22,7 +31,7 @@ local a3l92_x1 = {
   numberPool      = "Berlin",
 
   compatibleMaps  = { "Berlin" },
-  vehicleGroup    = "Berlin_A3L92_Group",
+  vehicleGroup    = fk_a3l_cat,
 
   vehicles = {
     utils:wagen(utils.ftype.a3l92["S"], true, 538, utils.skins.a3l92["HellGelb"]),
@@ -45,7 +54,7 @@ local a3l92_x2 = {
   numberPool      = "Berlin",
 
   compatibleMaps  = { "Berlin" },
-  vehicleGroup    = "Berlin_A3L92_Group",
+  vehicleGroup    = fk_a3l_cat,
 
   vehicles = {
     utils:wagen(utils.ftype.a3l92["S"], true, 538, utils.skins.a3l92["HellGelb"]),
@@ -70,7 +79,7 @@ local a3l92_x3 = {
   numberPool      = "Berlin",
 
   compatibleMaps  = { "Berlin" },
-  vehicleGroup    = "Berlin_A3L92_Group",
+  vehicleGroup    = fk_a3l_cat,
 
   vehicles = {
     utils:wagen(utils.ftype.a3l92["S"], true, 538, utils.skins.a3l92["HellGelb"]),
@@ -97,7 +106,7 @@ local a3l92_x4 = {
   numberPool      = "Berlin",
 
   compatibleMaps  = { "Berlin" },
-  vehicleGroup    = "Berlin_A3L92_Group",
+  vehicleGroup    = fk_a3l_cat,
 
   vehicles = {
     utils:wagen(utils.ftype.a3l92["S"], true, 538, utils.skins.a3l92["HellGelb"]),
@@ -125,7 +134,7 @@ local a3l92_hk = {
   numberPool      = "Berlin",
 
   compatibleMaps  = { "Berlin" },
-  vehicleGroup    = "Berlin_A3L92_Group",
+  vehicleGroup    = fk_a3l_cat,
 
   vehicles = {
     utils:wagen(utils.ftype.a3l92["S"], true, 538),
@@ -154,7 +163,7 @@ local a3l92_hk_Sandwich = {
   numberPool      = "Berlin",
 
   compatibleMaps  = { "Berlin" },
-  vehicleGroup    = "Berlin_A3L92_Group",
+  vehicleGroup    = fk_a3l_cat,
 
   vehicles = {
     utils:wagen(utils.ftype.a3l92["S"], true, 538),

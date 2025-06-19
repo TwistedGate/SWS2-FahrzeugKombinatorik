@@ -1,165 +1,155 @@
 --[[
 
-	Warnung!
-	Die sind nur zum anschauen gedacht und sind nicht Fahrbar!
-	
-	Sie solten nirgendwo drangeklemmt werden da dies zur unspielbarkeit führt.
-	(~6FPS Lag, Fahrzeuge fahren nicht, Kamera und Charakter können nicht bewegt werden, usw.)
-	
-	------------------------------------------------------------------------------------
-	
-	Warning!
-	These are here just to be able to spawn them in-game to get a closer look at them.
-	
-	Do not attach them to any running vehicle, it will cause immense problems in-game.
-	(~6FPS Lag, Vehicles are undrivable, Camera and Character can not be moved, etc.)
-	
+  Warnung!
+  Die sind nur zum anschauen gedacht und sind nicht Fahrbar!
+  
+  Sie solten nirgendwo drangeklemmt werden da dies zur unspielbarkeit führt.
+  (~6FPS Lag, Fahrzeuge fahren nicht, Kamera und Charakter können nicht bewegt werden, usw.)
+  
+  ------------------------------------------------------------------------------------
+  
+  Warning!
+  These are here just to be able to spawn them in-game to get a closer look at them.
+  
+  Do not attach them to any running vehicle, it will cause immense problems in-game.
+  (~6FPS Lag, Vehicles are undrivable, Camera and Character can not be moved, etc.)
+  
 --]]
 
-local BerlinAIGroup = {
-	contentType			= "railVehicleGroup",
-	contentName			= "Berlin_AI_Group",
+local BerlinAIGroup = utils:makeCat(
+  "Berlin_AI_Group",
+  "AI (Berlin)",
+  "Sandbox",
+  { "Berlin" },
+  "Alle benutzerdefinierten Zusammenstellungen von \"FahrzeugKombinatorik\".\n\n"..
+  "All custom consists added by \"FahrzeugKombinatorik\".",
+  "AI-only vehicles!\n\nWARNING\nThese are not drivable and the camera and\npawn may break when spawning in these."
+)
 
-	title						= "‎AI (Berlin)",	-- Unsichtbares Unicode-Zeichen damit diese railVehicleGroup in-game am Ende der Liste eingefügt wird
-	author					= "TwistedGate",
-	description			= "AI-only vehicles! These are not drivable and the camera and pawn may break when spawning in these.",
-
-	infos						= "",
-
-	compatibleMaps 	= { "Berlin" },
-	previewFilename	= "/SubwaySim2_Core/UI/MainMenu/Backgrounds/Sandbox.Sandbox",
-}
-g_contentManager:addContent(BerlinAIGroup)
-
-local HamburgAIGroup = {
-	contentType			= "railVehicleGroup",
-	contentName			= "Hamburg_AI_Group",
-
-	title						= "‎AI (Hamburg)",	-- Unsichtbares Unicode-Zeichen damit diese railVehicleGroup in-game am Ende der Liste eingefügt wird
-	author					= "TwistedGate",
-	description			= "AI-only vehicles! These are not drivable and the camera and pawn may break when spawning in these.",
-
-	infos						= "",
-
-	compatibleMaps 	= { "Hamburg" },
-	previewFilename	= "/SubwaySim2_Core/UI/MainMenu/Backgrounds/Sandbox.Sandbox",
-}
-g_contentManager:addContent(HamburgAIGroup)
+local HamburgAIGroup = utils:makeCat(
+  "Hamburg_AI_Group",
+  "AI (Hamburg)",
+  "Sandbox",
+  { "Hamburg" },
+  "Alle benutzerdefinierten Zusammenstellungen von \"FahrzeugKombinatorik\".\n\n"..
+  "All custom consists added by \"FahrzeugKombinatorik\".",
+  "AI-only vehicles!\n\nWARNING\nThese are not drivable and the camera and\npawn may break when spawning in these."
+)
 
 --------------------------------------------------------------------------------
 
 local flexity = {
-	contentType			= "trainComposition",
-	contentName			= "Flexity",
+  contentType     = "trainComposition",
+  contentName     = "Flexity",
 
-	title           = "Flexity (AI)",
-	author				 	= "TwistedGate",
+  title           = "Flexity (AI)",
+  author          = "TwistedGate",
 
-	isMultipleUnit	= true,
-	numberPoolMin		= 1000,
-	numberPoolMax		= 1024,
-	numberPool			= "Berlin",
+  isMultipleUnit  = true,
+  numberPoolMin   = 1000,
+  numberPoolMax   = 1024,
+  numberPool      = "Berlin",
 
-	compatibleMaps 	= { "Berlin" },
-	vehicleGroup 		= "Berlin_AI_Group",
-	
-	vehicles = {
-		utils:wagen(utils.ftype.flexity["A"], true, 123),
-	},
+  compatibleMaps  = { "Berlin" },
+  vehicleGroup    = BerlinAIGroup,
+  
+  vehicles = {
+    utils:wagen(utils.ftype.flexity["A"], true, 123),
+  },
 }
 g_contentManager:addContent(flexity)
 
 local gi1e_x1 = {
-	contentType			= "trainComposition",
-	contentName			= "GI1E_x1",
+  contentType     = "trainComposition",
+  contentName     = "GI1E_x1",
 
-	title						= "GI1E x1 (AI)",
-	author					= "TwistedGate",
+  title           = "GI1E x1 (AI)",
+  author          = "TwistedGate",
 
-	isMultipleUnit	= true,
-	numberPoolMin		= 1000,
-	numberPoolMax		= 1024,
-	numberPool			= "Berlin",
+  isMultipleUnit  = true,
+  numberPoolMin   = 1000,
+  numberPoolMax   = 1024,
+  numberPool      = "Berlin",
 
-	compatibleMaps	= { "Berlin" },
-	vehicleGroup		= "Berlin_A3L92_Group",
+  compatibleMaps  = { "Berlin" },
+  vehicleGroup    = BerlinAIGroup,
 
-	vehicles				= {
-		utils:wagen(utils.ftype.gi1e["A"], true, 123),
-		utils:wagen(utils.ftype.gi1e["B"], false, 124),
-		utils:wagen(utils.ftype.gi1e["B"], true, 125),
-		utils:wagen(utils.ftype.gi1e["A"], false, 126),
-	},
+  vehicles = {
+    utils:wagen(utils.ftype.gi1e["A"], true, 123),
+    utils:wagen(utils.ftype.gi1e["B"], false, 124),
+    utils:wagen(utils.ftype.gi1e["B"], true, 125),
+    utils:wagen(utils.ftype.gi1e["A"], false, 126),
+  },
 }
 g_contentManager:addContent(gi1e_x1)
 
 local gi1e_x2 = {
-	contentType			= "trainComposition",
-	contentName			= "GI1E_x2",
+  contentType     = "trainComposition",
+  contentName     = "GI1E_x2",
 
-	title						= "GI1E x2 (AI)",
-	author					= "TwistedGate",
+  title           = "GI1E x2 (AI)",
+  author          = "TwistedGate",
 
-	isMultipleUnit	= true,
-	numberPoolMin		= 1000,
-	numberPoolMax		= 1024,
-	numberPool			= "Berlin",
+  isMultipleUnit  = true,
+  numberPoolMin   = 1000,
+  numberPoolMax   = 1024,
+  numberPool      = "Berlin",
 
-	compatibleMaps	= { "Berlin" },
-	vehicleGroup		= "Berlin_A3L92_Group",
+  compatibleMaps  = { "Berlin" },
+  vehicleGroup    = BerlinAIGroup,
 
-	vehicles				= {
-		utils:wagen(utils.ftype.gi1e["A"], true, 123),
-		utils:wagen(utils.ftype.gi1e["B"], false, 124),
-		utils:wagen(utils.ftype.gi1e["B"], true, 125),
-		utils:wagen(utils.ftype.gi1e["A"], false, 126),
-		utils:wagen(utils.ftype.gi1e["A"], true, 127),
-		utils:wagen(utils.ftype.gi1e["B"], false, 128),
-		utils:wagen(utils.ftype.gi1e["B"], true, 129),
-		utils:wagen(utils.ftype.gi1e["A"], false, 130),
-	},
+  vehicles = {
+    utils:wagen(utils.ftype.gi1e["A"], true, 123),
+    utils:wagen(utils.ftype.gi1e["B"], false, 124),
+    utils:wagen(utils.ftype.gi1e["B"], true, 125),
+    utils:wagen(utils.ftype.gi1e["A"], false, 126),
+    utils:wagen(utils.ftype.gi1e["A"], true, 127),
+    utils:wagen(utils.ftype.gi1e["B"], false, 128),
+    utils:wagen(utils.ftype.gi1e["B"], true, 129),
+    utils:wagen(utils.ftype.gi1e["A"], false, 130),
+  },
 }
 g_contentManager:addContent(gi1e_x2)
 
 local br481 = {
-	contentType			= "trainComposition",
-	contentName			= "BR481",
+  contentType     = "trainComposition",
+  contentName     = "BR481",
 
-	title						= "BR481 (AI)",
-	author					= "TwistedGate",
+  title           = "BR481 (AI)",
+  author          = "TwistedGate",
 
-	isMultipleUnit	= true,
-	numberPoolMin		= 1000,
-	numberPoolMax		= 1024,
-	numberPool			= "Berlin",
+  isMultipleUnit  = true,
+  numberPoolMin   = 1000,
+  numberPoolMax   = 1024,
+  numberPool      = "Berlin",
 
-	compatibleMaps 	= { "Berlin" },
-	vehicleGroup 		= "Berlin_A3L92_Group",
+  compatibleMaps  = { "Berlin" },
+  vehicleGroup    = BerlinAIGroup,
 
-	vehicles				= {
-		utils:wagen(utils.ftype.br481["A"], true, 123),
-		utils:wagen(utils.ftype.br481["B"], false, 124),
-		utils:wagen(utils.ftype.br481["B"], true, 125),
-		utils:wagen(utils.ftype.br481["A"], false, 126),
-	},
+  vehicles = {
+    utils:wagen(utils.ftype.br481["A"], true, 123),
+    utils:wagen(utils.ftype.br481["B"], false, 124),
+    utils:wagen(utils.ftype.br481["B"], true, 125),
+    utils:wagen(utils.ftype.br481["A"], false, 126),
+  },
 }
 g_contentManager:addContent(br481)
 
 local br474 = {
-	contentType			= "trainComposition",
-	contentName			= "BR474",
+  contentType     = "trainComposition",
+  contentName     = "BR474",
 
-	title						= "BR474 (AI)",
-	author					= "TwistedGate",
+  title           = "BR474 (AI)",
+  author          = "TwistedGate",
 
-	compatibleMaps	= { "Hamburg" },
-	vehicleGroup		= "Hamburg_AI_Group",
-	
-	vehicles = {
-		utils:wagen(utils.ftype.br474["A"], true, 123),
-		utils:wagen(utils.ftype.br474["B"], true, 124),
-		utils:wagen(utils.ftype.br474["B"], false, 125),
-		utils:wagen(utils.ftype.br474["A"], false, 126),
-	},
+  compatibleMaps  = { "Hamburg" },
+  vehicleGroup    = HamburgAIGroup,
+  
+  vehicles = {
+    utils:wagen(utils.ftype.br474["A"], true, 123),
+    utils:wagen(utils.ftype.br474["B"], true, 124),
+    utils:wagen(utils.ftype.br474["B"], false, 125),
+    utils:wagen(utils.ftype.br474["A"], false, 126),
+  },
 }
 g_contentManager:addContent(br474)

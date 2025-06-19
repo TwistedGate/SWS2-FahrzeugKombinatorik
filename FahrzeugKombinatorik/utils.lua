@@ -17,7 +17,7 @@ utils = {
       ["1"] = "Hamburg_DT5.1",
       ["2"] = "Hamburg_DT5.2",
     },
-    
+		
     -- KI Fahrzeuge -- Nur zum angucken, nicht fahrbar!
     -- AI Vehicles -- Just too look at them, not drivable!
     
@@ -39,7 +39,7 @@ utils = {
     br481 = { -- Nur zum angucken, nicht fahrbar!
       ["A"] = "Berlin_BR481",
       ["B"] = "Berlin_BR482"
-    },
+    }
   },
 
   -- Hier könnte man seine eigenen eintragen
@@ -52,10 +52,8 @@ utils = {
     },
     dt5 = {
       ["SampleSkin"] = "SkinGraffiti.png",
-    },
-  },
-  
-  
+    }
+  }
 }
 
 --[[
@@ -69,4 +67,61 @@ function utils:wagen(name, fwd, number, skinPath)
   if number then v["vehicle"]["_components"]["VehicleNumber"] = { vehicleNumber = tostring(number) } end
   if skinPath then v["vehicle"]["_components"]["RepaintComponent"] = { repaintPath = skinPath } end
   return v
+end
+
+function utils:makeCat(internalName, name, background, maps, desc, infoText)
+  --[[
+    Vielen dank an Foobian auf dem SubwaySim Discord!
+		Ohne welchen ich  hier nich mal wüste wie das zu machen ist :)
+  ]]
+  
+  assert(internalName, "Category needs an Internal-Name! (Argument #1)")
+  assert(name, "Category needs a Display-Name! (Argument #2)")
+  assert(maps, "Category needs a Map Table! (Argument #4)")
+	
+	assert(type(maps)=="table", "Map variable must be a Table! Got: "..type(maps).." (Argument #4)")
+  
+  local cat = {
+    contentType     = "railVehicleGroup",
+    contentName     = internalName,
+
+    title           = "‎"..name,  -- Unsichtbares Unicode-Zeichen damit diese railVehicleGroup in-game am Ende der Liste eingefügt wird
+    author          = "TwistedGate",
+    description     = desc or "",
+
+    infos           = infoText or "",
+
+    compatibleMaps  = maps,
+    previewFilename = "/SubwaySim2_Core/UI/MainMenu/Backgrounds/"..(background and (background.."."..background) or "Sandbox.Sandbox"),
+    --[[ Liste der Namen ALLER hintergrund bilder. (Stand: 19.06.2025 [DD.MM.YYYY])
+    A3L92_big
+    BackGround
+    Character1_Body
+    Character1_Square
+    Character2_Body
+    Character2_Square
+    Character3_Body
+    Character3_Square
+    Character4_Body
+    Character4_Square
+    CityBerlin
+    CityHamburg
+    CitySelect
+    DT5_1_big
+    DT5_2_big
+    HK_big
+    NewTrip_Berlin
+    NewTrip_Hamburg
+    QuickPlay
+    Sandbox
+    Scenarios_Berlin
+    Scenarios_Hamburg
+    Timetable
+    Tutorials
+    Tutorials_Berlin
+    Tutorials_Hamburg
+    ]]
+  }
+	g_contentManager:addContent(cat)
+  return internalName
 end
