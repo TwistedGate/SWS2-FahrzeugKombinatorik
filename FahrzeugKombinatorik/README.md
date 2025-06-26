@@ -1,8 +1,8 @@
 # Utils.lua
 
-[English Below](#gb)
+[English Below](#english)
 
-# :de:
+# Deutsch
 Du hast die freiheit sie für dein eigene(s) projekt(e) zu nutzen!
 
 Um sie nutzen zu können muss sie als erstes in der `mod.lua` geladen werden, andernfals funktioniert es nicht!
@@ -43,7 +43,7 @@ Wie du siehst, sollte es echt einfach sein zu verstehen.
 
 ***
 
-# :gb:
+# English
 You are free to use it for your own project(s)!
 
 To use it you need to have it be loaded as the first script, otherwise it wont work!
