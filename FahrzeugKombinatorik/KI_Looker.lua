@@ -16,42 +16,20 @@
   
 --]]
 
-local BerlinAIGroup = utils:makeCat(
-  "Berlin_AI_Group",
-  "AI (Berlin)",
-  "Sandbox",
-  { "Berlin" },
-  "Alle benutzerdefinierten Zusammenstellungen von \"FahrzeugKombinatorik\".\n\n"..
-  "All custom consists added by \"FahrzeugKombinatorik\".",
-  "AI-only vehicles!\n\nWARNING\nThese are not drivable and the camera and\npawn may break when spawning in these."
-)
-
-local HamburgAIGroup = utils:makeCat(
-  "Hamburg_AI_Group",
-  "AI (Hamburg)",
-  "Sandbox",
-  { "Hamburg" },
-  "Alle benutzerdefinierten Zusammenstellungen von \"FahrzeugKombinatorik\".\n\n"..
-  "All custom consists added by \"FahrzeugKombinatorik\".",
-  "AI-only vehicles!\n\nWARNING\nThese are not drivable and the camera and\npawn may break when spawning in these."
-)
-
---------------------------------------------------------------------------------
-
 local flexity = {
-  contentType     = "trainComposition",
-  contentName     = "Flexity",
+  contentType    = "trainComposition",
+  contentName    = "Flexity",
 
-  title           = "Flexity (AI)",
-  author          = "TwistedGate",
+  title          = "Flexity (AI)",
+  author         = "TwistedGate",
 
-  isMultipleUnit  = true,
-  numberPoolMin   = 1000,
-  numberPoolMax   = 1024,
-  numberPool      = "Berlin",
+  isMultipleUnit = true,
+  numberPoolMin  = 1000,
+  numberPoolMax  = 1024,
+  numberPool     = "Berlin",
 
-  compatibleMaps  = { "Berlin" },
-  vehicleGroup    = BerlinAIGroup,
+  compatibleMaps = { "Berlin" },
+  vehicleGroup   = utils.categories.BerlinAIGroup,
   
   vehicles = {
     utils:wagen(utils.ftype.flexity["A"], true, 123),
@@ -60,19 +38,19 @@ local flexity = {
 g_contentManager:addContent(flexity)
 
 local gi1e_x1 = {
-  contentType     = "trainComposition",
-  contentName     = "GI1E_x1",
+  contentType    = "trainComposition",
+  contentName    = "GI1E_x1",
 
-  title           = "GI1E x1 (AI)",
-  author          = "TwistedGate",
+  title          = "GI1E x1 (AI)",
+  author         = "TwistedGate",
 
-  isMultipleUnit  = true,
-  numberPoolMin   = 1000,
-  numberPoolMax   = 1024,
-  numberPool      = "Berlin",
+  isMultipleUnit = true,
+  numberPoolMin  = 1000,
+  numberPoolMax  = 1024,
+  numberPool     = "Berlin",
 
-  compatibleMaps  = { "Berlin" },
-  vehicleGroup    = BerlinAIGroup,
+  compatibleMaps = { "Berlin" },
+  vehicleGroup   = utils.categories.BerlinAIGroup,
 
   vehicles = {
     utils:wagen(utils.ftype.gi1e["A"], true, 123),
@@ -84,19 +62,19 @@ local gi1e_x1 = {
 g_contentManager:addContent(gi1e_x1)
 
 local gi1e_x2 = {
-  contentType     = "trainComposition",
-  contentName     = "GI1E_x2",
+  contentType    = "trainComposition",
+  contentName    = "GI1E_x2",
 
-  title           = "GI1E x2 (AI)",
-  author          = "TwistedGate",
+  title          = "GI1E x2 (AI)",
+  author         = "TwistedGate",
 
-  isMultipleUnit  = true,
-  numberPoolMin   = 1000,
-  numberPoolMax   = 1024,
-  numberPool      = "Berlin",
+  isMultipleUnit = true,
+  numberPoolMin  = 1000,
+  numberPoolMax  = 1024,
+  numberPool     = "Berlin",
 
-  compatibleMaps  = { "Berlin" },
-  vehicleGroup    = BerlinAIGroup,
+  compatibleMaps = { "Berlin" },
+  vehicleGroup   = utils.categories.BerlinAIGroup,
 
   vehicles = {
     utils:wagen(utils.ftype.gi1e["A"], true, 123),
@@ -112,19 +90,19 @@ local gi1e_x2 = {
 g_contentManager:addContent(gi1e_x2)
 
 local br481 = {
-  contentType     = "trainComposition",
-  contentName     = "BR481",
+  contentType    = "trainComposition",
+  contentName    = "BR481",
 
-  title           = "BR481 (AI)",
-  author          = "TwistedGate",
+  title          = "BR481 (AI)",
+  author         = "TwistedGate",
 
-  isMultipleUnit  = true,
-  numberPoolMin   = 1000,
-  numberPoolMax   = 1024,
-  numberPool      = "Berlin",
+  isMultipleUnit = true,
+  numberPoolMin  = 1000,
+  numberPoolMax  = 1024,
+  numberPool     = "Berlin",
 
-  compatibleMaps  = { "Berlin" },
-  vehicleGroup    = BerlinAIGroup,
+  compatibleMaps = { "Berlin" },
+  vehicleGroup   = utils.categories.BerlinAIGroup,
 
   vehicles = {
     utils:wagen(utils.ftype.br481["A"], true, 123),
@@ -136,14 +114,14 @@ local br481 = {
 g_contentManager:addContent(br481)
 
 local br474 = {
-  contentType     = "trainComposition",
-  contentName     = "BR474",
-
-  title           = "BR474 (AI)",
-  author          = "TwistedGate",
-
-  compatibleMaps  = { "Hamburg" },
-  vehicleGroup    = HamburgAIGroup,
+  contentType    = "trainComposition",
+  contentName    = "BR474",
+  
+  title          = "BR474 (AI)",
+  author         = "TwistedGate",
+  
+  compatibleMaps = { "Hamburg" },
+  vehicleGroup   = utils.categories.HamburgAIGroup,
   
   vehicles = {
     utils:wagen(utils.ftype.br474["A"], true, 123),
