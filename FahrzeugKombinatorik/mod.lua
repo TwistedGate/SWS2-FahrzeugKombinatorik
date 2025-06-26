@@ -1,6 +1,6 @@
 return {
   title       = "FahrzeugKombinatorik",
-  version     = "1.6.0",
+  version     = "1.7.0",
   description = "Einfach ein wenig spass haben kann gut tun!",
   author      = "TwistedGate",
   targetGame  = "SubwaySim2",
