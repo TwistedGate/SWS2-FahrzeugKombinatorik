@@ -146,6 +146,14 @@ utils.ftype = {
     ["2"] = "Hamburg_DT5.2",
   },
   
+  al1 = {
+    ["A"] = "Hamburg_AL1"
+  },
+  
+  lb6 = {
+    ["A"] = "Hamburg_LB6"
+  },
+  
   -- KI Fahrzeuge -- Nur zum angucken, nicht fahrbar!
   -- AI Vehicles -- Just too look at them, not drivable!
   
@@ -239,4 +247,12 @@ utils.categories.HamburgAIGroup = utils:makeCat(
   { "Hamburg" },
   g_l10n:format("$FK_Default_Cat_Desc"),
   g_l10n:format("$FK_AI_Cat_Info")
+)
+
+utils.categories.fk_al1_cat = utils:makeCat(
+  "FahrzeugKombinatorik_AL1_Group",
+  "FK AL1",
+  {path="/TwistedGate_FahrzeugKombinatorik/UI/", name="FahrzeugKombinatorik_Main_Banner"},
+  { "Berlin", "Hamburg" },
+  g_l10n:format("$FK_Default_Cat_Desc")
 )

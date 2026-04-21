@@ -1,6 +1,6 @@
 return {
   title       = "FahrzeugKombinatorik",
-  version     = "1.7.0",
+  version     = "1.8.0",
   description = "Einfach ein wenig spass haben kann gut tun!",
   author      = "TwistedGate",
   targetGame  = "SubwaySim2",
@@ -19,6 +19,8 @@ return {
     "HK_Category.lua",
     "HK_BD.lua",
     "HK_Dulli.lua",
+		
+    "AL1_Category.lua",
 
     "KI_Looker.lua",
 
