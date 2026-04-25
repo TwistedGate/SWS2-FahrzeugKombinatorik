@@ -233,7 +233,7 @@ utils.categories.fk_hk_dulli_cat = utils:makeCat(
 utils.categories.fk_al1_cat = utils:makeCat(
   "FahrzeugKombinatorik_AL1_Group",
   "FK AL1",
-  {path="/TwistedGate_FahrzeugKombinatorik/UI/", name="FahrzeugKombinatorik_Main_Banner"},
+  {path="/TwistedGate_FahrzeugKombinatorik/UI/", name="FahrzeugKombinatorik_AL1_Banner"},
   { "Berlin", "Hamburg" },
   g_l10n:format("$FK_Default_Cat_Desc")
 )
