@@ -30,7 +30,7 @@ function utils:makeCat(internalName, name, background, maps, desc, infoText)
   
   assert(internalName, "Category needs an Internal-Name! (Argument #1)")
   assert(name, "Category needs a Display-Name! (Argument #2)")
-  assert(maps, "Category needs a Map Table! (Argument #4)")
+  assert(maps, "Category needs a Map Table! (Argument #3)")
   
   assert(type(maps)=="table", "Map variable must be a Table! Got: "..type(maps).." (Argument #4)")
   
@@ -91,7 +91,7 @@ function utils:makeCat(internalName, name, background, maps, desc, infoText)
 end
 
 
--- Für den internen gebraucht. "a3lnum" und "hknum" funktion nutzt diese.
+-- Für den internen gebrauch. "a3lnum" und "hknum" funktion nutzt diese.
 utils.vars = {
   a3lnum = {
     numMin = 538,
@@ -137,8 +137,8 @@ utils.ftype = {
   },
   
   a3l92 = {
-    ["S"] = "Berlin_A3L92_S",
     ["K"] = "Berlin_A3L92_K",
+    ["S"] = "Berlin_A3L92_S",
   },
   
   dt5 = {
@@ -164,7 +164,6 @@ utils.ftype = {
   
   flexity = {
     ["A"] = "Berlin_Flexity_F8Z",
-    -- ["B"] = "Berlin_Flexity_F8Z_1x", -- Komplett Kaputt! Completely Broken!
   },
   
   gi1e = {
@@ -231,6 +230,14 @@ utils.categories.fk_hk_dulli_cat = utils:makeCat(
   g_l10n:format("$FK_Default_Cat_Desc")
 )
 
+utils.categories.fk_al1_cat = utils:makeCat(
+  "FahrzeugKombinatorik_AL1_Group",
+  "FK AL1",
+  {path="/TwistedGate_FahrzeugKombinatorik/UI/", name="FahrzeugKombinatorik_Main_Banner"},
+  { "Berlin", "Hamburg" },
+  g_l10n:format("$FK_Default_Cat_Desc")
+)
+
 utils.categories.BerlinAIGroup = utils:makeCat(
   "Berlin_AI_Group",
   "AI (Berlin)",
@@ -247,12 +254,4 @@ utils.categories.HamburgAIGroup = utils:makeCat(
   { "Hamburg" },
   g_l10n:format("$FK_Default_Cat_Desc"),
   g_l10n:format("$FK_AI_Cat_Info")
-)
-
-utils.categories.fk_al1_cat = utils:makeCat(
-  "FahrzeugKombinatorik_AL1_Group",
-  "FK AL1",
-  {path="/TwistedGate_FahrzeugKombinatorik/UI/", name="FahrzeugKombinatorik_Main_Banner"},
-  { "Berlin", "Hamburg" },
-  g_l10n:format("$FK_Default_Cat_Desc")
 )
