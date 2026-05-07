@@ -98,6 +98,12 @@ utils.vars = {
     numMax = 639,
     num = 0
   },
+  gl1enum = {
+    numMin = 1070,
+    numMax = 1095,
+    num = 0,
+    sect = 0
+  },
   hknum = {
     numMin = 1001,
     numMax = 1024,
@@ -105,6 +111,7 @@ utils.vars = {
     sect = 0
   }
 }
+
 function utils:a3lnum()
   local n = utils.vars.a3lnum.num + 1
   if n > (utils.vars.a3lnum.numMax - utils.vars.a3lnum.numMin) then n = 0 end
@@ -127,6 +134,22 @@ function utils:hknum(isLast)
   return a + b
 end
 
+-- TODO
+function utils:gl1e(isLast)
+  local a = (utils.vars.gl1enum.numMin + utils.vars.gl1enum.num) * 10
+  local b = utils.vars.gl1enum.sect + 1
+  utils.vars.gl1enum.sect = b
+	
+  if b >= 9 or isLast then
+    utils.vars.gl1enum.sect = 0
+    local n = utils.vars.gl1enum.num + 1
+    if n > (utils.vars.gl1enum.numMax - utils.vars.gl1enum.numMin) then n = 0 end
+    utils.vars.gl1enum.num = n
+  end
+  
+  return a + b
+end
+
 -- Allgemeine Fahrzeug Typen
 utils.ftype = {
   hk = {
@@ -139,6 +162,11 @@ utils.ftype = {
   a3l92 = {
     ["K"] = "Berlin_A3L92_K",
     ["S"] = "Berlin_A3L92_S",
+  },
+  
+  gl1e = {
+    ["A"] = "Berlin_G1E_A_NP",
+    ["B"] = "Berlin_G1E_B_NP",
   },
   
   dt5 = {
@@ -164,11 +192,6 @@ utils.ftype = {
   
   flexity = {
     ["A"] = "Berlin_Flexity_F8Z",
-  },
-  
-  gi1e = {
-    ["A"] = "Berlin_GI1E_a",
-    ["B"] = "Berlin_GI1E_b",
   },
   
   br481 = {
@@ -226,6 +249,14 @@ utils.categories.fk_hk_dulli_cat = utils:makeCat(
   "FahrzeugKombinatorik_Dulli_HK_Group",
   "FK Dulli HK",
   {path="/TwistedGate_FahrzeugKombinatorik/UI/", name="FahrzeugKombinatorik_Dulli_HK_Banner"},
+  { "Berlin" },
+  g_l10n:format("$FK_Default_Cat_Desc")
+)
+
+utils.categories.fk_gl1e_cat = utils:makeCat(
+  "FahrzeugKombinatorik_GL1E_Group",
+  "FK GL/1E",
+  {path="/TwistedGate_FahrzeugKombinatorik/UI/", name="FahrzeugKombinatorik_GL1E_Banner"},
   { "Berlin" },
   g_l10n:format("$FK_Default_Cat_Desc")
 )

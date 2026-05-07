@@ -1,6 +1,6 @@
 return {
   title       = "FahrzeugKombinatorik",
-  version     = "1.8.0",
+  version     = "1.8.2",
   description = "Einfach ein wenig spass haben kann gut tun!",
   author      = "TwistedGate",
   targetGame  = "SubwaySim2",
@@ -20,8 +20,10 @@ return {
     "HK_BD.lua",
     "HK_Dulli.lua",
 		
+		"Gisela_Category.lua",
+		
     "AL1_Category.lua",
-
+		
     "KI_Looker.lua",
 
     "cleanup.lua" -- Removing all Global variables created by FahrzeugKombinatorik

@@ -37,58 +37,6 @@ local flexity = {
 }
 g_contentManager:addContent(flexity)
 
-local gi1e_x1 = {
-  contentType    = "trainComposition",
-  contentName    = "GI1E_x1",
-
-  title          = "GI1E x1 (AI)",
-  author         = "TwistedGate",
-
-  isMultipleUnit = true,
-  numberPoolMin  = 1000,
-  numberPoolMax  = 1024,
-  numberPool     = "Berlin",
-
-  compatibleMaps = { "Berlin" },
-  vehicleGroup   = utils.categories.BerlinAIGroup,
-
-  vehicles = {
-    utils:wagen(utils.ftype.gi1e["A"], true, 123),
-    utils:wagen(utils.ftype.gi1e["B"], false, 124),
-    utils:wagen(utils.ftype.gi1e["B"], true, 125),
-    utils:wagen(utils.ftype.gi1e["A"], false, 126),
-  },
-}
-g_contentManager:addContent(gi1e_x1)
-
-local gi1e_x2 = {
-  contentType    = "trainComposition",
-  contentName    = "GI1E_x2",
-
-  title          = "GI1E x2 (AI)",
-  author         = "TwistedGate",
-
-  isMultipleUnit = true,
-  numberPoolMin  = 1000,
-  numberPoolMax  = 1024,
-  numberPool     = "Berlin",
-
-  compatibleMaps = { "Berlin" },
-  vehicleGroup   = utils.categories.BerlinAIGroup,
-
-  vehicles = {
-    utils:wagen(utils.ftype.gi1e["A"], true, 123),
-    utils:wagen(utils.ftype.gi1e["B"], false, 124),
-    utils:wagen(utils.ftype.gi1e["B"], true, 125),
-    utils:wagen(utils.ftype.gi1e["A"], false, 126),
-    utils:wagen(utils.ftype.gi1e["A"], true, 127),
-    utils:wagen(utils.ftype.gi1e["B"], false, 128),
-    utils:wagen(utils.ftype.gi1e["B"], true, 129),
-    utils:wagen(utils.ftype.gi1e["A"], false, 130),
-  },
-}
-g_contentManager:addContent(gi1e_x2)
-
 local br481 = {
   contentType    = "trainComposition",
   contentName    = "BR481",
